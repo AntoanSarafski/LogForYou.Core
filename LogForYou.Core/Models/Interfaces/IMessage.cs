@@ -16,6 +16,6 @@ namespace LogForU.Core.Models.Interfaces
                                                 // Critical - "No connection string found in App.config"
                                                 // Fatal    - "mscorlib.dll does not respond"
 
-        public ReportLevel reportLevel { get; }
+        public ReportLevel ReportLevel { get; }
     }
 }

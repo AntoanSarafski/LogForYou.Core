@@ -9,7 +9,7 @@ namespace LogForU.Core.Appenders.Interfaces
 {
     public interface IAppender
     {
-        ReportLevel ReportLevel { get; }
+        ReportLevel ReportLevel { get; set; }
 
         void AppendMessage(IMessage message);
     }

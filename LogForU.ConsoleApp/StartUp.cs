@@ -1,4 +1,6 @@
-﻿using LogForU.Core.Loggers;
+﻿using LogForU.Core.Appenders;
+using LogForU.Core.Appenders.Interfaces;
+using LogForU.Core.Loggers;
 using LogForU.Core.Loggers.Interfaces;
 using System;
 
@@ -8,7 +10,11 @@ namespace LogForU.ConsoleApp
     {
         static void Main(string[] args)
         {
-            ILogger logger = new Logger();
+            IAppender appender = new ConsoleAppender();
+
+            ILogger logger = new Logger(appender);
+
+            logger.Info("3/31/2015 5:23:54 PM", "mscorlib.dll does not respond");
         }
     }
 }

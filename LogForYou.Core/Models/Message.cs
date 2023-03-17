@@ -1,4 +1,5 @@
 ﻿using LogForU.Core.Enums;
+using LogForU.Core.Exceptions;
 using LogForU.Core.Models.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -20,15 +21,26 @@ namespace LogForU.Core.Models
         }
         public string CreatedTime 
         {
-            get;
-            private set;
+            get => createdTime;
+            private set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new EmptyCreatedTimeException();
+                }
+                createdTime = value;
+            }
 
         }
 
         public string Text
         {
-            get;
-            private set;
+            get => text;
+            private set
+            {
+                text = value;
+            }
+
 
         }
 

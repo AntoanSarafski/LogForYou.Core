@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Appenders\Interfaces\" />
     <Folder Include="Layouts\Interfaces\" />
   </ItemGroup>
 

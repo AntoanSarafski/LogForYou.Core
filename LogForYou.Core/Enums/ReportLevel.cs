@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LogForU.Core.Enums
+﻿namespace LogForU.Core.Enums
 {
     public enum ReportLevel
     {

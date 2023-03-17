@@ -10,4 +10,8 @@
     <Folder Include="Core\Interfaces\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LogForYou.Core\LogForU.Core.csproj" />
+  </ItemGroup>
+
 </Project>

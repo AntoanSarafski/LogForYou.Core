@@ -24,7 +24,7 @@ namespace LogForU.Core.Models
             get => createdTime;
             private set
             {
-                if (string.IsNullOrEmpty(value))
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new EmptyCreatedTimeException();
                 }
@@ -40,7 +40,7 @@ namespace LogForU.Core.Models
             get => text;
             private set
             {
-                if (string.IsNullOrEmpty(value))
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new EmptyMessageTextException();
                 }

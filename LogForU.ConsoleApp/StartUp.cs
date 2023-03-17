@@ -15,7 +15,7 @@ namespace LogForU.ConsoleApp
 
             ILogger logger = new Logger(appender);
 
-            logger.Info("3/31/2015 5:23:54 PM", "mscorlib.dll does not respond");
+            logger.Info("3/31/2015 5:23:54 PM", " ");
         }
     }
 }

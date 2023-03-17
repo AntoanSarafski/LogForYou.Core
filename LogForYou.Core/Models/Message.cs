@@ -1,6 +1,7 @@
 ﻿using LogForU.Core.Enums;
 using LogForU.Core.Exceptions;
 using LogForU.Core.Models.Interfaces;
+using LogForU.Core.Utils;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -28,8 +29,11 @@ namespace LogForU.Core.Models
                 {
                     throw new EmptyCreatedTimeException();
                 }
+                if (!DateTimeValidator.ValidateDateTime(value))
+                {
+                    throw new InvalidDateTimeFormatException();
+                }
 
-                //TODO Validate if CreateTime date can be create / format
                 createdTime = value;
             }
 

@@ -28,6 +28,8 @@ namespace LogForU.Core.Models
                 {
                     throw new EmptyCreatedTimeException();
                 }
+
+                //TODO Validate if CreateTime date can be create / format
                 createdTime = value;
             }
 
@@ -38,6 +40,10 @@ namespace LogForU.Core.Models
             get => text;
             private set
             {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new EmptyMessageTextException();
+                }
                 text = value;
             }
 

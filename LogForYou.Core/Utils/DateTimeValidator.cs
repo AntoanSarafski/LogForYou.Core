@@ -11,7 +11,7 @@ namespace LogForU.Core.Utils
 
         public static void AddFormat(string format)
             => formats.Add(format);
-        public static bool ValidateDateTime(string createdTime)
+        internal static bool ValidateDateTime(string createdTime)
         {
             foreach (var format in formats)
             {

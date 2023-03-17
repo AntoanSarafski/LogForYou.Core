@@ -17,8 +17,9 @@ namespace LogForU.ConsoleApp
             ILogger logger = new Logger(appender);
 
             DateTimeValidator.AddFormat("MM-dd-yyyy h:mm:ss tt");
+            DateTimeValidator.AddFormat("MM.dd.yyyy h:mm:ss tt");
 
-            logger.Info("03-31-2015 5:23:54 PM", "Everything seems fine");
+            logger.Info("03.31.2015 5:23:54 PM", "Everything seems fine");
         }
     }
 }

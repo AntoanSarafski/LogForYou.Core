@@ -3,6 +3,7 @@ using LogForU.Core.Appenders.Interfaces;
 using LogForU.Core.Enums;
 using LogForU.Core.Loggers;
 using LogForU.Core.Loggers.Interfaces;
+using LogForU.Core.Utils;
 using System;
 
 namespace LogForU.ConsoleApp
@@ -15,7 +16,9 @@ namespace LogForU.ConsoleApp
 
             ILogger logger = new Logger(appender);
 
-            logger.Info("3/31/2015 5:23:54 PM", "Everything seems fine");
+            DateTimeValidator.AddFormat("MM-dd-yyyy h:mm:ss tt");
+
+            logger.Info("03-31-2015 5:23:54 PM", "Everything seems fine");
         }
     }
 }

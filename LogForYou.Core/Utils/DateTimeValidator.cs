@@ -7,18 +7,25 @@ namespace LogForU.Core.Utils
 {
     public static class DateTimeValidator
     {
+        private static readonly ISet<string> formats = new HashSet<string> { "M/dd/yyyy h:mm:ss tt" };
+
+        public static void AddFormat(string format)
+            => formats.Add(format);
         public static bool ValidateDateTime(string createdTime)
         {
-            string format = "M/dd/yyyy h:mm:ss tt";
-            if (DateTime.TryParseExact(
-                createdTime, 
-                format, 
-                CultureInfo.InvariantCulture,
-                DateTimeStyles.None, 
-                out DateTime result))
+            foreach (var format in formats)
             {
-                return true;
+                if (DateTime.TryParseExact(
+                createdTime,
+                format,
+                CultureInfo.InvariantCulture,
+                DateTimeStyles.None,
+                out DateTime result))
+                {
+                    return true;
+                }
             }
+
             return false;
         }
     }

@@ -8,8 +8,9 @@ namespace LogForU.Core.Models
 {
     public class Message : IMessage
     {
-
-        //TODO VALIDATE MESSAGE !
+        private string createdTime;
+        private string text;
+        private string createdTime1;
 
         public Message(string createdTime, string text, ReportLevel reportLevel)
         {
@@ -17,9 +18,19 @@ namespace LogForU.Core.Models
             Text = text;
             ReportLevel = reportLevel;
         }
-        public string CreatedTime { get; private set; }
+        public string CreatedTime 
+        {
+            get;
+            private set;
 
-        public string Text { get; private set; }
+        }
+
+        public string Text
+        {
+            get;
+            private set;
+
+        }
 
         public ReportLevel ReportLevel { get; private set; }
     }

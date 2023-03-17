@@ -9,7 +9,7 @@ using System.Text;
 
 namespace LogForU.Core.Loggers
 {
-    public class Logger : ILogger
+    public class Logger : ILogger 
     {
 
         private readonly ICollection<IAppender> appenders;

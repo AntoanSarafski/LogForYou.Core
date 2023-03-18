@@ -7,7 +7,7 @@ namespace LogForU.Core.Layouts
 {
     public class SimpleLayout : ILayout
     {
-        private const string simpleFormat = "{0} - {1} - {2}";
-        public string Format => "";
+        private const string SimpleFormat = "{0} - {1} - {2}";
+        public string Format => SimpleFormat;
     }
 }

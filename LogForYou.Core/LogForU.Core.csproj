@@ -5,8 +5,4 @@
 	  <RootNamespace>LogForU.Core</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Layouts\Interfaces\" />
-  </ItemGroup>
-
 </Project>

@@ -41,11 +41,7 @@ namespace LogForU.Core.IO
             set;
         }
 
-        public string Content
-        {
-            get;
-            set;
-        }
+        public string Content => content.ToString();
 
         public int Size
         {

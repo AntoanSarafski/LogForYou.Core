@@ -36,7 +36,8 @@ namespace LogForU.Core.Loggers
 
         private void AppendAll(string dateTime, string text, ReportLevel reportLevel) // TODO Report Level.
         {
-            IMessage message = new Message(dateTime, text, reportLevel); 
+            IMessage message = new Message(dateTime, text, reportLevel);
+
 
 
             foreach (IAppender appender in appenders)

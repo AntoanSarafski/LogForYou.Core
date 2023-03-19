@@ -19,8 +19,7 @@ namespace LogForU.ConsoleApp
             //var simpleLayout = new SimpleLayout();
             //var consoleAppender = new ConsoleAppender(simpleLayout);
 
-            //var file = new LogFile();
-            //var fileAppender = new FileAppender(simpleLayout, file);
+
 
             //var logger = new Logger(consoleAppender, fileAppender);
             //logger.Error("3/26/2015 2:08:11 PM", "Error parsing JSON."); 
@@ -29,7 +28,12 @@ namespace LogForU.ConsoleApp
 
             var xmlLayout = new XmlLayout();
             var consoleAppender = new ConsoleAppender(xmlLayout);
-            var logger = new Logger(consoleAppender);
+
+            var file = new LogFile();
+            var fileAppender = new FileAppender(xmlLayout, file);
+
+
+            var logger = new Logger(consoleAppender, fileAppender);
 
             logger.Fatal("3/31/2015 5:23:54 PM", "mscorlib.dll does not respond");
             logger.Critical("3/31/2015 5:23:54 PM", "No connection string found in App.config");

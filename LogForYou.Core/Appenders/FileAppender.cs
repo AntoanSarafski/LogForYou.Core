@@ -21,6 +21,7 @@ namespace LogForU.Core.Appenders
 
         public ReportLevel ReportLevel { get ; set; }
 
+        public int MessagesCount { get; private set; }
 
         public void AppendMessage(IMessage message)
         {
@@ -28,6 +29,7 @@ namespace LogForU.Core.Appenders
 
             File.AppendAllText("text.txt", content + Environment.NewLine); //The path must come from LogFile file directory.Thats just for testing
 
+            MessagesCount++;
         }
     }
 }

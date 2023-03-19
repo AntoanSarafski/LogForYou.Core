@@ -14,6 +14,10 @@ namespace LogForU.Core.Appenders.Interfaces
 
         public ILayout Layout { get; }
 
+        public int MessagesCount { get; }
+
         void AppendMessage(IMessage message);
+
+
     }
 }

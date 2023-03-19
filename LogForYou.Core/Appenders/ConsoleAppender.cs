@@ -20,11 +20,14 @@ namespace LogForU.Core.Appenders
 
         public ReportLevel ReportLevel { get; set; }
 
+        public int MessagesCount { get; private set; }
+
         public void AppendMessage(IMessage message)
         {
 
             Console.WriteLine(string.Format(Layout.Format, message.CreatedTime, message.ReportLevel, message.Text));
-            
+
+            MessagesCount++;
         }
     }
 }

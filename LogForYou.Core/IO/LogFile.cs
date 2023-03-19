@@ -7,6 +7,17 @@ namespace LogForU.Core.IO
 {
     public class LogFile : ILogFile
     {
+
+        private string name;
+        private string extension;
+        private string path;
+
+        private readonly StringBuilder content;
+
+        public LogFile()
+        {
+            content = new StringBuilder();
+        }
         public string Name
         {
             get;
@@ -43,8 +54,6 @@ namespace LogForU.Core.IO
         }
 
         public void WriteLine(string text)
-        {
-            throw new NotImplementedException();
-        }
+            => content.AppendLine(text);
     }
 }

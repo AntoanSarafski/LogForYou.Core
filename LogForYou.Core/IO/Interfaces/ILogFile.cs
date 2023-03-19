@@ -8,7 +8,7 @@ namespace LogForU.Core.IO.Interfaces
     {
         string Name { get; }
 
-        string Extenxion { get; }
+        string Extension { get; }
 
         string Path { get; }
 

@@ -22,8 +22,8 @@ namespace LogForU.Core.IO
 
         public LogFile()
         {
-            Extension = DefaultExtension;
             Name = DefaultName;
+            Extension = DefaultExtension;
             Path = DefaultPath;
 
             content = new StringBuilder();

@@ -9,6 +9,7 @@ using LogForU.Core.Loggers;
 using LogForU.Core.Loggers.Interfaces;
 using LogForU.Core.Utils;
 using System;
+using System.IO;
 
 namespace LogForU.ConsoleApp
 {
@@ -29,7 +30,7 @@ namespace LogForU.ConsoleApp
             var xmlLayout = new XmlLayout();
             var consoleAppender = new ConsoleAppender(xmlLayout);
 
-            var file = new LogFile();
+            var file = new LogFile("test", "xml", Directory.GetCurrentDirectory());
             var fileAppender = new FileAppender(xmlLayout, file);
 
 

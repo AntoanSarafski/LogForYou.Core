@@ -21,7 +21,7 @@ namespace LogForU.ConsoleApp
             var fileAppender = new FileAppender(simpleLayout);
 
             var logger = new Logger(consoleAppender, fileAppender);
-            logger.Error("3/26/2015 2:08:11 PM", "Error parsing JSON.");
+            logger.Error("3/26/2015 2:08:11 PM", "Error parsing JSON."); 
             logger.Info("3/26/2015 2:08:11 PM", "User Pesho successfully registered.");
 
         }

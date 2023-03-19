@@ -17,6 +17,7 @@ namespace LogForU.Core.Appenders
         }
 
         public ILayout Layout { get; private set; }
+
         public ReportLevel ReportLevel { get; set; }
 
         public void AppendMessage(IMessage message)

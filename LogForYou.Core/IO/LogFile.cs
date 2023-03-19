@@ -24,6 +24,11 @@ namespace LogForU.Core.IO
             get;
             set;
         }
+        public string FullPath
+        {
+            get;
+            set;
+        }
 
         public string Content
         {

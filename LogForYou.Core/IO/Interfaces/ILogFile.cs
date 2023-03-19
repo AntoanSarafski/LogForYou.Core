@@ -12,6 +12,8 @@ namespace LogForU.Core.IO.Interfaces
 
         string Path { get; }
 
+        string FullPath { get; }
+
         string Content { get; }
 
         int Size { get; }
